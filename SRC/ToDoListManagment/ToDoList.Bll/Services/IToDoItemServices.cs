@@ -1,6 +1,14 @@
 ﻿namespace ToDoList.Bll.Services
 {
-    internal interface IToDoItemServices
+    public interface IToDoItemServices
     {
+        Task AddToDoItemAsync(ToDoItem item);
+        Task DeleteToDoItemByIdAsync(int id);
+        Task UpdateToDoItemAsync(ToDoItem item);
+        Task GetAllToDoItemsAsync(int skip, int take);
+        Task GetToDoItemByIdAsync();
+        Task GetByDueDateAsync(DateTime dueDate);
+        Task GetCompletedAsync(skip, take);
+        Task GetIncompletedAsync(skip, take);
     }
 }
