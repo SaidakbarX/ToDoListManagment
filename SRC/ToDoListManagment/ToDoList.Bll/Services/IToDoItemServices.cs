@@ -1,4 +1,6 @@
-﻿namespace ToDoList.Bll.Services
+﻿using ToDoList.DAL.Entity;
+
+namespace ToDoList.Bll.Services
 {
     public interface IToDoItemServices
     {
@@ -8,7 +10,7 @@
         Task GetAllToDoItemsAsync(int skip, int take);
         Task GetToDoItemByIdAsync();
         Task GetByDueDateAsync(DateTime dueDate);
-        Task GetCompletedAsync(skip, take);
-        Task GetIncompletedAsync(skip, take);
+        Task GetCompletedAsync( int skip, int take);
+        Task GetIncompletedAsync(int skip, int  take);
     }
 }
